@@ -367,10 +367,20 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
-                <version>${cobertura.version}</version>
-                <configuration>
-                    <check/>
-                </configuration>
+                <version>2.7</version>
+                  <configuration>
+       <formats>
+           <format>html</format>
+           <format>xml</format>
+       </formats>
+       <reportSets>
+           <reportSet>
+               <reports>
+                   <report>cobertura</report>
+               </reports>
+           </reportSet>
+       </reportSets>
+   </configuration>  
                 <executions>
                     <execution>
                         <goals>
